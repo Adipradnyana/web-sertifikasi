@@ -1,4 +1,5 @@
 <?php
+// menangkap value dari form
 include "class_dosen.php";
 $cdsn = new dosen();
 
