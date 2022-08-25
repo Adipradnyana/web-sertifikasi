@@ -1,4 +1,5 @@
 <?php
+// menangkang value data
 $nim = $_GET['nim'];
 include "class_peserta.php";
 $cpsr = new peserta();

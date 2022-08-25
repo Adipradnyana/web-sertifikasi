@@ -11,7 +11,7 @@ class dosen extends database{
 		// }
 	}
 
-    // method get data
+    // method menampilkan data
     function tampil_data(){
         $qry = mysqli_query($this->conn,"SELECT * FROM dosen");
             while($x = mysqli_fetch_assoc($qry)){
@@ -20,7 +20,7 @@ class dosen extends database{
             return $data;
         }
     
-    //method insert data
+    //method menambahkan data
     function tambah_data($data){
        
         $qry = mysqli_query($this->conn, "insert into dosen values 
@@ -36,7 +36,7 @@ class dosen extends database{
        return $qry;
    }
 
-   //method edit
+   //method edit data
    function edit($nidn){
        $qry = mysqli_query($this->conn,
        "select * from dosen where nidn = '$nidn'");
@@ -44,13 +44,13 @@ class dosen extends database{
        return $data;
    }
    
-   //method delete
+   //method hapus data
    function hapus_data($nidn){
        $qry = mysqli_query($this->conn,"delete from dosen where nidn = '$nidn'") or die(mysqli_error($this->conn));
        return $qry;
    }
 
-   //method update
+   //method perbarui data
    function update_data($data){
        $qry = mysqli_query($this->conn, "UPDATE dosen 
        set nama = '".$data['nama']."', 

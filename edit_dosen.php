@@ -1,4 +1,5 @@
 <?php
+// menangkang value data
 $nidn= $_GET['nidn'];
 include "class_dosen.php";
 $cdsn = new dosen();

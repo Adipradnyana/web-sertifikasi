@@ -5,6 +5,8 @@ class user extends database{
     function __construct(){
 		parent::__construct();
     }
+
+        // method login
         public function login($username,$password){
         
             $qry = mysqli_query($this->conn,"SELECT * FROM users WHERE username = '$username'

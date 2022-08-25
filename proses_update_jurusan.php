@@ -10,7 +10,7 @@ $data = array(
 
 $exec = $cjrs->update_data($data);
 
-//cek proses simpan data
+//cek proses perbarui data
 if($exec){
     echo "<script>alert('Data berhasil disimpan');
     window.location=jurusan.php</script>";

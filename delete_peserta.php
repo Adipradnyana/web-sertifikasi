@@ -1,4 +1,5 @@
 <?php
+//menangkap value dari form
 $nim = $_GET['nim'];
 include "class_peserta.php";
 $cpsr = new peserta();

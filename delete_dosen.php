@@ -6,7 +6,7 @@ $cdsn = new dosen();
 
 $exec = $cdsn->hapus_data($nidn);
 
-//cek proses simpan data
+//cek proses hapus data
 if($exec){
     echo "<script>alert('Data berhasil dihapus');
     window.location=dosen.php</script>";

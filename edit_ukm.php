@@ -1,4 +1,5 @@
 <?php
+// menangkang value data
 $kode_ukm = $_GET['kode_ukm'];
 include "class_ukm.php";
 $cukm = new ukm();

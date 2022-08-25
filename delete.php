@@ -5,7 +5,7 @@ include "class_mhs.php";
 $cmhs = new mahasiswa();
 
 $exec = $cmhs->hapus_data($nim);
-//cek query update
+//cek query hapus data
 if ($exec) {
     echo "<script>alert('Data berhasil di-delete');
         window.location='cari_mahasiswa.php'</script>";

@@ -1,4 +1,5 @@
 <?php
+// menangkang value data
 $kode_jurusan = $_GET['kode_jurusan'];
 include "class_jurusan.php";
 $cjrs = new jurusan();

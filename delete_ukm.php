@@ -1,11 +1,12 @@
 <?php
+//menangkap value dari form
 $kode_ukm = $_GET['kode_ukm'];
 include "class_ukm.php";
 $cukm = new ukm();
 
 $exec = $cukm->hapus_data($kode_ukm);
 
-//cek proses simpan data
+//cek proses hapus data
 if($exec){
     echo "<script>alert('Data berhasil dihapus');
     window.location=jurusan.php</script>";

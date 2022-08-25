@@ -16,7 +16,7 @@ $data = array(
 
 $exec = $cpsr->update_data($data);
 
-//cek proses simpan data
+//cek proses perbarui data
 if($exec){
     echo "<script>alert('Data berhasil disimpan');
     window.location=ukm.php</script>";

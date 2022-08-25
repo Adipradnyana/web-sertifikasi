@@ -1,4 +1,5 @@
 <?php
+// menangkang value data
 $nim = $_GET['nim'];
 include "class_mhs.php";
 $cmhs = new mahasiswa();

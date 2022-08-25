@@ -14,14 +14,15 @@ $data = array(
     'dosen_wali'    => $_POST['dosen_wali']
 );
 
-        $exec = $cmhs->update_data($data);
-        if ($exec) {
-            echo "<script>alert('Data berhasil di-update');
-                window.location='cari_mahasiswa.php'</script>";
-        }else{
-            echo "<script>alert('Data Gagal di-update');
-                window.location='cari_mahasiswa.php'</script>";
-        }
+$exec = $cmhs->update_data($data);
+// cek proses perbarui data
+if ($exec) {
+     echo "<script>alert('Data berhasil di-update');
+            window.location='cari_mahasiswa.php'</script>";
+}else{
+    echo "<script>alert('Data Gagal di-update');
+             window.location='cari_mahasiswa.php'</script>";
+    }
     
 
 

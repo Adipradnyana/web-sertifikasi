@@ -11,7 +11,7 @@ class peserta extends database{
 		// }
     } 
 
-    //method get data
+    //method menampilkan data
     function tampil_data(){
             $qry = mysqli_query($this->conn,"SELECT * FROM peserta");
             while($x = mysqli_fetch_assoc($qry)){
@@ -21,7 +21,7 @@ class peserta extends database{
         }
     
 
-    //method insert data
+    //method menambahkan data
     function tambah_data($data){
 		 $qry = mysqli_query($this->conn, "insert into peserta values 
          ('".$data['nim']."',
@@ -34,20 +34,20 @@ class peserta extends database{
 		 or die(mysqli_error($this->conn));
 		return $qry;
 	}
-    //method edit
+    //method edit data
     function edit($nim){
 		$qry = mysqli_query($this->conn,
         "select * from peserta where nim = '$nim'");
 		$data= mysqli_fetch_assoc($qry);
 		return $data;
 	}
-    //method delete
+    //method hapus data
     function hapus_data($nim){
 		$qry = mysqli_query($this->conn,"delete from peserta where nim = '$nim'") or die(mysqli_error($this->conn));
 		return $qry;
 	}
 
-    //method update
+    //method perbarui data
     function update_data($data){
 		$qry = mysqli_query($this->conn, "UPDATE peserta 
         set nama_mhs = '".$data['nama_mhs']."', 
@@ -61,7 +61,7 @@ class peserta extends database{
 		return $qry;
 	}
 
-    //method search data
+    //method mencari data
     function cari_data($nama){
         $qry = mysqli_query($this->conn,"SELECT * FROM peserta WHERE nama_mhs LIKE '%".$nama."%'");
         while($x = mysqli_fetch_assoc($qry)){

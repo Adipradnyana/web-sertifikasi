@@ -11,7 +11,7 @@ class mahasiswa extends database {
 		// }
 		
     }
-    //method get data
+    //method menampilkan data
     function tampil_data(){
             $qry = mysqli_query($this->conn,"SELECT * FROM mahasiswa JOIN  jurusan ON mahasiswa.kode_jurusan = jurusan.kode_jurusan");
             while($x = mysqli_fetch_assoc($qry)){
@@ -19,7 +19,7 @@ class mahasiswa extends database {
             }
             return $data;
         }
-    //method insert data
+    //method menambahkan data
     function tambah_data($data){
                 $qry = mysqli_query($this->conn, "insert into mahasiswa values 
 		        ('".$data['nim']."',
@@ -35,20 +35,20 @@ class mahasiswa extends database {
                  return $qry;
             }
 
-    //method edit
+    //method edit data
     function edit($nim){
 		$qry = mysqli_query($this->conn,
         "select * from mahasiswa where nim = '$nim'");
 		$data= mysqli_fetch_assoc($qry);
 		return $data;
 	}
-    //method delete
+    //method hapus data
     function hapus_data($nim){
 		$qry = mysqli_query($this->conn,"delete from mahasiswa where nim = '$nim'") or die(mysqli_error($this->conn));
 		return $qry;
 	}
 
-    //method update
+    //method perbarui data
     function update_data($data){
 		$qry = mysqli_query($this->conn, "UPDATE mahasiswa 
         set nama_mhs = '".$data['nama_mhs']."', 
@@ -63,7 +63,7 @@ class mahasiswa extends database {
 		return $qry;
 	}
 
-    //method search data
+    //method mencari data
     function cari_data($nama){
         $qry = mysqli_query($this->conn,"SELECT * FROM mahasiswa JOIN jurusan ON mahasiswa.kode_jurusan = jurusan.kode_jurusan WHERE nama_mhs LIKE '%".$nama."%'");
         while($x = mysqli_fetch_assoc($qry)){

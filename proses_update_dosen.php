@@ -17,7 +17,7 @@ $data = array(
 
 $exec = $cdsn-> update_data($data);
 
-//cek proses simpan data
+//cek proses perbarui data
 if($exec){
     echo "<script>alert('Data berhasil di-update');
     window.location=dosen.php</script>";
