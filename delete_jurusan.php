@@ -6,7 +6,7 @@ $cjrs = new jurusan();
 
 $exec = $cjrs->hapus_data($kode_jurusan);
 
-//cek proses simpan data
+//cek proses hapus data
 if($exec){
     echo "<script>alert('Data berhasil dihapus');
     window.location=jurusan.php</script>";

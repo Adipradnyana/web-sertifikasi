@@ -7,7 +7,7 @@
     $user = new user();
     
     $exec = $user->login($username,$password);
-      
+        // Cek proses login
         if($exec){
           session_start();
           $_SESSION['user'] = $data['username'];

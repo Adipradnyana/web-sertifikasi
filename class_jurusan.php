@@ -21,7 +21,6 @@ class jurusan extends database{
         }
     //method menambahkan data
     function tambah_data($data){
-       
         $qry = mysqli_query($this->conn, "insert into jurusan values 
        ('".$data['kode_jurusan']."',
        '".$data['nama_jurusan']."')") 
