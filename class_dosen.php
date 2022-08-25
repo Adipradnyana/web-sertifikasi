@@ -22,7 +22,6 @@ class dosen extends database{
     
     //method menambahkan data
     function tambah_data($data){
-       
         $qry = mysqli_query($this->conn, "insert into dosen values 
        ('".$data['nidn']."',
        '".$data['nama']."',
@@ -66,5 +65,4 @@ class dosen extends database{
    }
 
 }
-
 ?>

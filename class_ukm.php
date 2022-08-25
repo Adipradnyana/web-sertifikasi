@@ -23,7 +23,6 @@ class ukm extends database{
 
     //method tambah data
     function tambah_data($data){
-       
 		 $qry = mysqli_query($this->conn, "insert into ukm values 
 		('".$data['kode_ukm']."',
         '".$data['nama_ukm']."',
