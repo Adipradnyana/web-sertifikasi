@@ -27,7 +27,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Jurusan</label> <br>
-                        <a class="btn btn-secondary" href="jurusan.php" role="button">Input Mahasiswa</a>
+                        <a class="btn btn-secondary" href="jurusan.php" role="button">Data Jurusan</a>
                     </div>
                     <div class="mb-3 pb-3">
                         <label class="form-label">UKM</label> <br>
