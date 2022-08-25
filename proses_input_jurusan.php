@@ -1,4 +1,5 @@
 <?php
+// menangkap value dari form
 include "class_jurusan.php";
 $cjrs = new jurusan();
 
