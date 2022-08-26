@@ -11,7 +11,12 @@ class mahasiswa extends database {
 		// }
 		
     }
-    //method menampilkan data
+    
+    /**
+     * tampil_data
+     *
+     * @return void
+     */
     function tampil_data(){
             $qry = mysqli_query($this->conn,"SELECT * FROM mahasiswa JOIN  jurusan ON mahasiswa.kode_jurusan = jurusan.kode_jurusan");
             while($x = mysqli_fetch_assoc($qry)){
@@ -19,7 +24,13 @@ class mahasiswa extends database {
             }
             return $data;
         }
-    //method menambahkan data
+
+    /**
+     * tambah_data
+     *
+     * @param  mixed $data
+     * @return void
+     */
     function tambah_data($data){
                 $qry = mysqli_query($this->conn, "insert into mahasiswa values 
 		        ('".$data['nim']."',
@@ -35,20 +46,36 @@ class mahasiswa extends database {
                  return $qry;
             }
 
-    //method edit data
+    /**
+     * edit
+     *
+     * @param  mixed $nim
+     * @return void
+     */
     function edit($nim){
 		$qry = mysqli_query($this->conn,
         "select * from mahasiswa where nim = '$nim'");
 		$data= mysqli_fetch_assoc($qry);
 		return $data;
 	}
-    //method hapus data
+    
+    /**
+     * hapus_data
+     *
+     * @param  mixed $nim
+     * @return void
+     */
     function hapus_data($nim){
 		$qry = mysqli_query($this->conn,"delete from mahasiswa where nim = '$nim'") or die(mysqli_error($this->conn));
 		return $qry;
 	}
-
-    //method perbarui data
+    
+    /**
+     * update_data
+     *
+     * @param  mixed $data
+     * @return void
+     */
     function update_data($data){
 		$qry = mysqli_query($this->conn, "UPDATE mahasiswa 
         set nama_mhs = '".$data['nama_mhs']."', 
@@ -62,8 +89,13 @@ class mahasiswa extends database {
         or die(mysqli_error($this->conn));
 		return $qry;
 	}
-
-    //method mencari data
+    
+    /**
+     * cari_data
+     *
+     * @param  mixed $nama
+     * @return void
+     */
     function cari_data($nama){
         $qry = mysqli_query($this->conn,"SELECT * FROM mahasiswa JOIN jurusan ON mahasiswa.kode_jurusan = jurusan.kode_jurusan WHERE nama_mhs LIKE '%".$nama."%'");
         while($x = mysqli_fetch_assoc($qry)){

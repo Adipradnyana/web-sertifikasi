@@ -10,8 +10,12 @@ class peserta extends database{
 		// 	echo "<script>alert('Anda belum login, silahkan login terlebih dahulu');window.location = 'login.php'</script>";
 		// }
     } 
-
-    //method menampilkan data
+    
+    /**
+     * tampil_data
+     *
+     * @return void
+     */
     function tampil_data(){
             $qry = mysqli_query($this->conn,"SELECT * FROM peserta");
             while($x = mysqli_fetch_assoc($qry)){
@@ -19,9 +23,13 @@ class peserta extends database{
             }
             return $data;
         }
-    
-
-    //method menambahkan data
+        
+    /**
+     * tambah_data
+     *
+     * @param  mixed $data
+     * @return void
+     */
     function tambah_data($data){
 		 $qry = mysqli_query($this->conn, "insert into peserta values 
          ('".$data['nim']."',
@@ -34,20 +42,38 @@ class peserta extends database{
 		 or die(mysqli_error($this->conn));
 		return $qry;
 	}
-    //method edit data
+        
+    /**
+     * edit
+     *
+     * @param  mixed $nim
+     * @return void
+     */
     function edit($nim){
 		$qry = mysqli_query($this->conn,
         "select * from peserta where nim = '$nim'");
 		$data= mysqli_fetch_assoc($qry);
 		return $data;
 	}
-    //method hapus data
+        
+    /**
+     * hapus_data
+     *
+     * @param  mixed $nim
+     * @return void
+     */
     function hapus_data($nim){
 		$qry = mysqli_query($this->conn,"delete from peserta where nim = '$nim'") or die(mysqli_error($this->conn));
 		return $qry;
 	}
 
-    //method perbarui data
+        
+    /**
+     * update_data
+     *
+     * @param  mixed $data
+     * @return void
+     */
     function update_data($data){
 		$qry = mysqli_query($this->conn, "UPDATE peserta 
         set nama_mhs = '".$data['nama_mhs']."', 
@@ -60,8 +86,13 @@ class peserta extends database{
         or die(mysqli_error($this->conn));
 		return $qry;
 	}
-
-    //method mencari data
+  
+    /**
+     * cari_data
+     *
+     * @param  mixed $nama
+     * @return void
+     */
     function cari_data($nama){
         $qry = mysqli_query($this->conn,"SELECT * FROM peserta WHERE nama_mhs LIKE '%".$nama."%'");
         while($x = mysqli_fetch_assoc($qry)){

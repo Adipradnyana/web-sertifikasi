@@ -5,8 +5,14 @@ class user extends database{
     function __construct(){
 		parent::__construct();
     }
-
-        // method login
+     
+        /**
+         * login
+         *
+         * @param  mixed $username
+         * @param  mixed $password
+         * @return void
+         */
         public function login($username,$password){
         
             $qry = mysqli_query($this->conn,"SELECT * FROM users WHERE username = '$username'
