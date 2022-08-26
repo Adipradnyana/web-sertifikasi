@@ -7,7 +7,12 @@ class database{
   private $database = "bd203_db";
   
   protected $conn;
-
+  
+  /**
+   * __construct
+   *
+   * @return void
+   */
   public function __construct()
   {
       $this->conn = new mysqli($this->host, $this->username, $this->password, $this->database);
