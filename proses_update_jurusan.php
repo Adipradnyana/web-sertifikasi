@@ -11,12 +11,12 @@ $data = array(
 $exec = $cjrs->update_data($data);
 
 //cek proses perbarui data
-if($exec){
-    echo "<script>alert('Data berhasil disimpan');
-    window.location=jurusan.php</script>";
+if ($exec) {
+    echo "<script>alert('Data berhasil di-update');
+           window.location='jurusan.php'</script>";
 }else{
-    echo "<script>alert('Data gagal disimpan');
-    window.location=jurusan.php</script>";
-}
+   echo "<script>alert('Data Gagal di-update');
+            window.location='jurusan.php'</script>";
+   }
 
 ?>

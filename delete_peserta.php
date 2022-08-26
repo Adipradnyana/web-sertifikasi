@@ -7,10 +7,10 @@ $cpsr = new peserta();
 $exec = $cpsr->hapus_data($nim);
 
 //cek proses simpan data
-if($exec){
-    echo "<script>alert('Data berhasil dihapus');
-    window.location=jurusan.php</script>";
+if ($exec) {
+    echo "<script>alert('Data berhasil di-update');
+           window.location='cari_peserta.php'</script>";
 }else{
-    echo "<script>alert('Data gagal dihapus');
-    window.location=jurusan.php</script>";
-}
+   echo "<script>alert('Data Gagal di-update');
+            window.location='cari_peserta.php'</script>";
+   }

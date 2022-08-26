@@ -20,10 +20,10 @@ $exec = $cdsn->tambah_data($data);
 
 
 //cek proses simpan data
-if($exec){
-    echo "<script>alert('Data berhasil disimpan');
-    window.location=dosen.php</script>";
+if ($exec) {
+    echo "<script>alert('Data berhasil di-update');
+           window.location='dosen.php'</script>";
 }else{
-    echo "<script>alert('Data gagal disimpan');
-    window.location=dosen.php</script>";
-}
+   echo "<script>alert('Data Gagal di-update');
+            window.location='dosen.php'</script>";
+   }

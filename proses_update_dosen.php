@@ -18,10 +18,10 @@ $data = array(
 $exec = $cdsn-> update_data($data);
 
 //cek proses perbarui data
-if($exec){
+if ($exec) {
     echo "<script>alert('Data berhasil di-update');
-    window.location=dosen.php</script>";
+           window.location='dosen.php'</script>";
 }else{
-    echo "<script>alert('Data gagal di-update');
-    window.location=dosen.php</script>";
-}
+   echo "<script>alert('Data Gagal di-update');
+            window.location='dosen.php'</script>";
+   }

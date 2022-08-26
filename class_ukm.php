@@ -70,13 +70,13 @@ class ukm extends database{
      * @return void
      */
     function update_data($data){
-		$qry = mysqli_query($this->conn, "UPDATE ukm 
-        set nama_ukm = '".$data['nama_ukm']."', 
-        pembina = '".$data['pembina']."', 
-        where kode_ukm = '".$data['kode_ukm']."'") 
+        $qry = mysqli_query($this->conn, "UPDATE ukm 
+        set nama_ukm = '".$data['nama_ukm']."',
+         pembina = '".$data['pembina']."',
+         where kode_ukm = '".$data['kode_ukm']."'") 
         or die(mysqli_error($this->conn));
-		return $qry;
-	}
+        return $qry;
+    }
 }
 
 

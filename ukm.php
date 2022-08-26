@@ -75,7 +75,6 @@
                 <td><?php echo $data['nama_ukm'] ?></td>
                 <td><?php echo $data['pembina'] ?></td>
                 <td>
-                    <a href="edit_ukm.php?kode_ukm=<?php echo $data['kode_ukm'] ?>"><button>Edit</button></a>
                     <a href="delete_ukm.php?kode_ukm=<?php echo $data['kode_ukm'] ?>"><button>Delete</button></a>
                 </td>
             </tr>

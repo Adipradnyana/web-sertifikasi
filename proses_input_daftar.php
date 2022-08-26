@@ -17,12 +17,12 @@ $data = array(
 $exec = $cpsr->tambah_data($data);
 
 //cek proses simpan data
-if($exec){
-    echo "<script>alert('Data berhasil disimpan');
-    window.location=ukm.php</script>";
+if ($exec) {
+    echo "<script>alert('Data berhasil di-update');
+           window.location='daftar_ukm.php'</script>";
 }else{
-    echo "<script>alert('Data gagal disimpan');
-    window.location=ukm.php</script>";
-}
+   echo "<script>alert('Data Gagal di-update');
+            window.location='daftar_ukm.php'</script>";
+   }
 
 ?>

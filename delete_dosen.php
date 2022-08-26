@@ -7,10 +7,10 @@ $cdsn = new dosen();
 $exec = $cdsn->hapus_data($nidn);
 
 //cek proses hapus data
-if($exec){
-    echo "<script>alert('Data berhasil dihapus');
-    window.location=dosen.php</script>";
+if ($exec) {
+    echo "<script>alert('Data berhasil di-update');
+           window.location='dosen.php'</script>";
 }else{
-    echo "<script>alert('Data gagal dihapus');
-    window.location=dosen.php</script>";
-}
+   echo "<script>alert('Data Gagal di-update');
+            window.location='dosen.php'</script>";
+   }
