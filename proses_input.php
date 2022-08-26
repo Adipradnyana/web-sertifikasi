@@ -19,11 +19,6 @@ $data = array(
     'email'         => $_POST['email'],
     'dosen_wali'    => $_POST['dosen_wali']
 );
- //Mengecek file yang sama
- if (file_exists($target_file)) {
-    echo "Maaf, Foto dengan nama yang sama sudah ada";
-    $fileUpOK = 0;
-}
 
 //mengecek ukuran / size
 if ($_FILES['foto']['size'] > 500000) {

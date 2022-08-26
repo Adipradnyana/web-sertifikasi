@@ -3,19 +3,19 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    include "class_user.php";
-    $user = new user();
+    include "class_admin.php";
+    $admin = new admin();
     
-    $exec = $user->login($username,$password);
+    $exec = $admin->login($username,$password);
         // Cek proses login
         if($exec){
           session_start();
           $_SESSION['user'] = $data['username'];
           echo "<script>alert('Login Berhasil');
-                window.location = 'home_user.php';</script>";
+                window.location = 'home.php';</script>";
         }else{
             echo  "<script>alert('Login Gagal, cek kembali username dan password');
-                        window.location = 'login.php';</script>";
+                        window.location = 'login_admin.php';</script>";
         }
 
 ?>
