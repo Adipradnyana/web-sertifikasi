@@ -13,12 +13,12 @@ class user extends database{
          * @param  mixed $password
          * @return void
          */
-        public function login($username,$password){
+        public function login($data){
         
-            $qry = mysqli_query($this->conn,"SELECT * FROM users WHERE username = '$username'
-            AND password = '$password'");
-            $data = mysqli_fetch_assoc($qry);
-            return $data;
+          $qry = "SELECT * FROM users WHERE (username = '".$data['username']."') AND password = '".$data['password']."' "  or die(mysqli_error($this->conn));
+          $exec = mysqli_query($this->conn, $qry);
+          $data = mysqli_fetch_array($exec);
+          return $data;
             // $row = mysqli_num_row($qry);
             // if($row == 1){
             //     session_start();

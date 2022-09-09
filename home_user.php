@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(!isset($_SESSION['username'])){
+    echo "<script>alert('Anda Belum Login! Silahkan Login dulu');
+    window.location = 'login.php';</script>";
+}
+
+?>
+
 <html>
     <head>
         <title>Home</title>

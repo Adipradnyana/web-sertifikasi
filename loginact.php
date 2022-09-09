@@ -1,16 +1,21 @@
 <?php
-    //menangkap data dari form
-    $username = $_POST['username'];
-    $password = $_POST['password'];
 
     include "class_user.php";
     $user = new user();
+
+    //menangkap data dari form
+if(isset($_POST['submit'])){
+    $data = array(
+        'username' => $_POST['username'],
+        'password' => $_POST['password'],
+    );
+}
     
-    $exec = $user->login($username,$password);
+    $exec = $user->login($data);
         // Cek proses login
         if($exec){
           session_start();
-          $_SESSION['user'] = $data['username'];
+          $_SESSION['username'] = $data['username'];
           echo "<script>alert('Login Berhasil');
                 window.location = 'home_user.php';</script>";
         }else{
